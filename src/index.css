@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #F8F9FC;
+}
+
+body {
+  @apply bg-appBackground text-appPrimaryText;
+}
+
+.smooth-card {
+  @apply bg-appCardBackground rounded-xl shadow-sm border border-transparent transition-all duration-200;
+}
+
+.smooth-card:hover {
+  @apply shadow-md border-appBorder/30;
+}
+
+.nav-item {
+  @apply flex flex-col items-center justify-center space-y-1 text-appSecondaryText hover:text-blue-600 transition-colors;
+}
+
+.nav-item.active {
+  @apply text-blue-600 font-medium;
+}
+
+.btn-primary {
+  @apply w-full h-[55px] bg-blue-600 text-white font-semibold rounded-2xl flex items-center justify-center hover:bg-blue-700 transition-colors;
+}
+
+.input-field {
+  @apply w-full p-4 bg-gray-100 rounded-2xl outline-none border border-transparent focus:border-blue-500/30 transition-all;
+}
